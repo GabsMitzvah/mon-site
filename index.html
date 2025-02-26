@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Premier Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenue sur mon site !</h1>
+    <p>L’heure actuelle est : <span id="heure"></span></p>
+    
+    <script>
+        function afficherHeure() {
+            let maintenant = new Date();
+            document.getElementById("heure").textContent = maintenant.toLocaleTimeString();
+        }
+        setInterval(afficherHeure, 1000);
+        afficherHeure();
+    </script>
+</body>
+</html>
